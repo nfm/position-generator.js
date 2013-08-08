@@ -7,7 +7,7 @@
 #
 # May be freely distributed according to MIT license.
 
-PositionGenerator =
+@PositionGenerator =
   # Generate a unique position between `prev` and `next` values
   # Reduce `next` value and raise result until it is higher than `prev` value
   #
