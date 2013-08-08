@@ -26,15 +26,16 @@
   # PositionGenerator.raise('123') # => '124'
   # PositionGenerator.raise('9') # => ':'
   raise: (string) ->
+    string ||= '1'
     @handleLastChar string, (lastCode) ->
       String.fromCharCode lastCode + 1
 
   # Decrease a string's last character and append "1"
-  # Returns "1" for blank string
   #
   # PositionGenerator.reduce('1') # => '01'
   # PositionGenerator.reduce('111') # => '1101'
   reduce: (string) ->
+    string ||= '1'
     @handleLastChar string, (lastCode) ->
       reducedChar = (if lastCode then String.fromCharCode(lastCode - 1) else "")
       reducedChar + "1"
